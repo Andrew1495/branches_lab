@@ -20,7 +20,8 @@ class FootballResultsTest(unittest.TestCase):
     def test_final_score_3_3_result_draw(self):
         self.assertEqual("draw", get_result(self.score_3))
 
-
+    def test_get_list_of_scores(self):
+        self.assertEqual(["home win, away win, draw"], get_list_of_scores(self.score, self.score_2, self.score_3))
 
 if __name__ == "__main__":
     unittest.main()
